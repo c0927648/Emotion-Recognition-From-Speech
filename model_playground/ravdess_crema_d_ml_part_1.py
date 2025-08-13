@@ -286,7 +286,7 @@ import numpy as np
 import librosa
 from sklearn.preprocessing import LabelEncoder
 
-SR = 16000          # must match your cleaning step
+SR = 16000          # must match the  cleaning step
 N_MFCC = 20         # 20 MFCCs is standard
 USE_DELTAS = True   # include Δ and ΔΔ
 AGG_FUNCS = ("mean","std","min","max")  # aggregate over time
@@ -308,7 +308,7 @@ def mfcc_stats_from_audio(y, sr=SR, n_mfcc=N_MFCC, use_deltas=USE_DELTAS):
     if "max"  in AGG_FUNCS: stats.append(F.max(axis=1))
     return np.concatenate(stats, axis=0).astype(np.float32)  # shape: n_feats * len(AGG_FUNCS)
 
-# ---------- Build X, y from your cleaned all_data ----------
+# ---------- Build X, y from the cleaned all_data ----------
 # all_data must be: [(audio_array, label_str), ...]
 labels = [lbl for _, lbl in all_data]
 le = LabelEncoder().fit(labels)
@@ -469,7 +469,7 @@ joblib.dump(le, "label_encoder.joblib")
 
 import joblib, json
 
-# If your dict was models = {"XGBoost": xgb_pipe, ...}
+# if dict was models = {"XGBoost": xgb_pipe, ...}
 best_model = models["XGBoost"]   # already fitted Pipeline(scaler -> XGB)
 joblib.dump(best_model, "xgb_pipeline.pkl")
 
