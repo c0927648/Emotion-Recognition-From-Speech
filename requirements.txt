@@ -1,0 +1,12 @@
+streamlit
+librosa
+numpy
+scikit-learn
+joblib
+matplotlib
+json5
+pandas
+tensorflow-datasets
+xgboost
+torch
+streamlit-audio-recorder
