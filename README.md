@@ -1,4 +1,4 @@
-#Speech Emotion Recognition (SER) Project
+# Speech Emotion Recognition (SER) Project
 
 ##  Overview
 This project focuses on **Speech Emotion Recognition (SER)** using **classical machine learning models** (XGBoost, SVM, Random Forest) and **deep learning architectures** (BiLSTM, 1D CNN, Advanced CRNN).  
