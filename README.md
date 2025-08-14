@@ -5,14 +5,14 @@ This project focuses on **Speech Emotion Recognition (SER)** using **classical m
 The system is designed to classify speech audio into **six emotions**: Angry, Disgust, Fear, Happy, Neutral, and Sad.
 
 A **Streamlit web app** has been built for easy testing and demonstration.  
-🔗 **Live Demo:** (https://emotion-recognition-from-speech.streamlit.app/)
+ **Live Demo:** (https://emotion-recognition-from-speech.streamlit.app/)
 
 ---
 
 ##  Datasets
 We used three widely recognized emotional speech datasets:
 
-### 🎙️ 1. RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song)
+###  1. RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song)
 - 24 professional actors (12 male, 12 female)
 - 8 emotions: calm, happy, sad, angry, fearful, surprise, disgust, neutral
 - Each utterance spoken with two levels of emotional intensity
@@ -24,7 +24,7 @@ We used three widely recognized emotional speech datasets:
 - Multiple sentences spoken in different emotions and intensities
 - More natural variations in tone and accent compared to RAVDESS
 
-### 🎙️ . TESS (Toronto Emotional Speech Set)
+###  3. TESS (Toronto Emotional Speech Set)
 - 2 female actors (younger & older voice)
 - 7 emotions: anger, disgust, fear, happiness, pleasant surprise, sadness, neutral
 - Each emotion recorded for 200+ target words
