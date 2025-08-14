@@ -13,6 +13,7 @@ from datetime import datetime, timedelta
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+import sys
 
 # CONFIG
 SR = 16000
@@ -248,6 +249,28 @@ st.sidebar.info(
     """
 )
 st.sidebar.markdown(f"**XGBoost Validation Accuracy:** <span style='color:#4CAF50;font-size:18px'><b>{model_metrics['XGBoost']['accuracy']*100:.1f}%</b></span>", unsafe_allow_html=True)
+
+# System Information
+st.sidebar.markdown("---")
+st.sidebar.markdown("### 🔧 System Info")
+try:
+    import sklearn
+    import xgboost as xgb
+    
+    version_info = f"""
+    **Python:** {sys.version.split()[0]}
+    **NumPy:** {np.__version__}
+    **Librosa:** {librosa.__version__}
+    **Scikit-learn:** {sklearn.__version__}
+    **XGBoost:** {xgb.__version__}
+    **Streamlit:** {st.__version__}
+    **Pandas:** {pd.__version__}
+    """
+    st.sidebar.text(version_info)
+except Exception as e:
+    st.sidebar.text(f"Version info error: {e}")
+
+st.sidebar.markdown("---")
 
 # Main interface
 page = st.sidebar.radio(
